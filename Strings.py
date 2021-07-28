@@ -3,11 +3,7 @@
 # a floating point number and print it out.
 text = "X-DSPAM-Confidence: 0.8475"
 i = text.find(':')+1
-while True:
-    if text[i] == ' ':
-        i = i+1
-    else:
-        break
 num = text[i:]
+num.strip()
 num = float(num)
 print(num)
