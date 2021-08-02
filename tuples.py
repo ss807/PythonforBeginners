@@ -21,6 +21,8 @@ for line in fh:
     hrno[hr[0]] = hrno.get(hr[0], 0) + 1
 sortedlist = list()
 for key, value in hrno.items():
-    sortedlist.append(key, value)
+    newtup = (key, value)
+    sortedlist.append(newtup)
 sortedlist = sorted(sortedlist)
-print(sortedlist)
+for i in sortedlist:
+    print(i[0], i[1])
